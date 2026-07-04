@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="SEED">
+  <defs>
+    <linearGradient id="markGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#274312"/>
+      <stop offset="1" stop-color="#8FE057"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="6" fill="#080C07"/>
+  <polygon points="8,12 40,12 35,20 8,20" fill="url(#markGradient)"/>
+  <polygon points="8,22 40,22 36,30 8,30" fill="url(#markGradient)" opacity="0.9"/>
+  <polygon points="8,32 40,32 37,40 8,40" fill="url(#markGradient)" opacity="0.78"/>
+</svg>
