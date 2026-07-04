@@ -1,5 +1,7 @@
 # SEED 2026 — Landing page del encuentro
 
+Sitio publicado: https://oscarjoel1990.github.io/seed-2026/
+
 Landing page estática (HTML + CSS + JS vanilla) para el encuentro **SEED 2026: Soil, Earth. Regenerative Design**. No requiere backend, base de datos ni servicios de pago. Lista para publicarse gratis en GitHub Pages.
 
 ## 1. Qué contiene este proyecto
