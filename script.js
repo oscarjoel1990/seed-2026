@@ -51,34 +51,71 @@
     });
   });
 
-  /* ---- Cuenta regresiva ---- */
-  // Fecha objetivo: 17 de octubre de 2026, 00:00h, Ciudad de México (UTC-6).
-  // Cuando se confirme el horario exacto del encuentro, actualiza esta constante.
-  var COUNTDOWN_TARGET = new Date("2026-10-17T00:00:00-06:00").getTime();
+  /* ---- Cuenta regresiva de la etapa Early Bird ----
+     Hay dos copias del mismo widget en la página (hero + sección Boletos);
+     ambas se actualizan a la vez porque se seleccionan con querySelectorAll.
+     Estados:
+       1) Antes del 20 de julio  → "El precio Early Bird comienza en:"
+       2) 20 jul – 31 ago        → "El precio Early Bird termina en:"
+       3) Después del 31 de ago  → mensaje de cierre, cuenta detenida.
+     Si las fechas de la etapa Early Bird cambian, ajusta estas dos constantes. */
+  var EARLY_BIRD_START = new Date("2026-07-20T00:00:00-06:00").getTime();
+  var EARLY_BIRD_END = new Date("2026-08-31T23:59:59-06:00").getTime();
 
-  var countdownEl = document.getElementById("countdown");
-  var cdDays = document.getElementById("cd-days");
-  var cdHours = document.getElementById("cd-hours");
-  var cdMinutes = document.getElementById("cd-minutes");
-  var cdSeconds = document.getElementById("cd-seconds");
+  var countdownWidgets = document.querySelectorAll("[data-countdown-widget]");
 
   function pad(n) {
     return String(n).padStart(2, "0");
   }
 
+  function setCountdownValues(days, hours, minutes, seconds) {
+    document.querySelectorAll('[data-cd="days"]').forEach(function (el) {
+      el.textContent = pad(days);
+    });
+    document.querySelectorAll('[data-cd="hours"]').forEach(function (el) {
+      el.textContent = pad(hours);
+    });
+    document.querySelectorAll('[data-cd="minutes"]').forEach(function (el) {
+      el.textContent = pad(minutes);
+    });
+    document.querySelectorAll('[data-cd="seconds"]').forEach(function (el) {
+      el.textContent = pad(seconds);
+    });
+  }
+
+  function setCountdownCaption(text) {
+    document.querySelectorAll("[data-countdown-caption]").forEach(function (el) {
+      el.textContent = text;
+    });
+  }
+
   function updateCountdown() {
-    if (!countdownEl || !cdDays || !cdHours || !cdMinutes || !cdSeconds) return;
+    if (!countdownWidgets.length) return;
 
     var now = new Date().getTime();
-    var diff = COUNTDOWN_TARGET - now;
+    var diff;
+    var caption;
+    var isPast = false;
 
-    if (diff <= 0) {
-      cdDays.textContent = "00";
-      cdHours.textContent = "00";
-      cdMinutes.textContent = "00";
-      cdSeconds.textContent = "00";
-      countdownEl.classList.add("is-past");
-      countdownEl.setAttribute("aria-label", "SEED 2026 ya ha comenzado");
+    if (now < EARLY_BIRD_START) {
+      diff = EARLY_BIRD_START - now;
+      caption = "El precio Early Bird ($4,200 MXN) comienza en:";
+    } else if (now <= EARLY_BIRD_END) {
+      diff = EARLY_BIRD_END - now;
+      caption = "El precio Early Bird ($4,200 MXN) termina en:";
+    } else {
+      diff = 0;
+      isPast = true;
+      caption = "La etapa Early Bird ha finalizado";
+    }
+
+    if (isPast) {
+      setCountdownValues(0, 0, 0, 0);
+      setCountdownCaption(caption);
+      countdownWidgets.forEach(function (widget) {
+        widget.classList.add("is-past");
+        widget.setAttribute("aria-label", "La etapa Early Bird ha finalizado");
+      });
       clearInterval(countdownTimer);
       return;
     }
@@ -88,14 +125,12 @@
     var minutes = Math.floor((diff / (1000 * 60)) % 60);
     var seconds = Math.floor((diff / 1000) % 60);
 
-    cdDays.textContent = pad(days);
-    cdHours.textContent = pad(hours);
-    cdMinutes.textContent = pad(minutes);
-    cdSeconds.textContent = pad(seconds);
+    setCountdownValues(days, hours, minutes, seconds);
+    setCountdownCaption(caption);
   }
 
   var countdownTimer;
-  if (countdownEl) {
+  if (countdownWidgets.length) {
     updateCountdown();
     countdownTimer = setInterval(updateCountdown, 1000);
   }
