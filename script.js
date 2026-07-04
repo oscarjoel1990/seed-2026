@@ -101,20 +101,21 @@
   }
 
   /* ---- Conteo de visitantes ----
-     Usa countapi.xyz, un servicio externo gratuito y sin registro que
-     incrementa un contador cada vez que alguien carga la página. No hay
-     backend propio. Si el servicio no responde, se muestra un guion.
-     Ver README.md → "Conteo de visitantes" para cambiarlo o quitarlo. */
+     Usa CounterAPI (api.counterapi.dev), un servicio externo gratuito y sin
+     registro que incrementa un contador cada vez que alguien carga la
+     página. No hay backend propio. Si el servicio no responde, se muestra
+     un guion. Ver README.md → "Conteo de visitantes" para cambiarlo o
+     quitarlo. */
   var visitorCountEl = document.getElementById("visitor-count");
   if (visitorCountEl) {
-    fetch("https://api.countapi.xyz/hit/seed-2026-oscarjoel1990/visitas")
+    fetch("https://api.counterapi.dev/v1/seed-2026-oscarjoel1990/visitas/up")
       .then(function (response) {
-        if (!response.ok) throw new Error("countapi request failed");
+        if (!response.ok) throw new Error("counterapi request failed");
         return response.json();
       })
       .then(function (data) {
-        if (data && typeof data.value === "number") {
-          visitorCountEl.textContent = data.value.toLocaleString("es-MX");
+        if (data && typeof data.count === "number") {
+          visitorCountEl.textContent = data.count.toLocaleString("es-MX");
         }
       })
       .catch(function () {

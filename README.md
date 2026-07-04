@@ -115,7 +115,7 @@ var COUNTDOWN_TARGET = new Date("2026-10-17T09:00:00-06:00").getTime();
 
 Cuando la fecha se cumple, la cuenta regresiva se detiene sola y muestra ceros.
 
-**Conteo de visitantes (footer):** usa [countapi.xyz](https://countapi.xyz), un servicio externo, gratuito y sin registro que incrementa un número cada vez que alguien carga la página. No requiere backend propio ni cuenta de pago. El namespace usado es `seed-2026-oscarjoel1990` y la clave `visitas` (línea correspondiente en `script.js`). Ten en cuenta:
+**Conteo de visitantes (footer):** usa [CounterAPI](https://counterapi.dev), un servicio externo, gratuito y sin registro que incrementa un número cada vez que alguien carga la página. No requiere backend propio ni cuenta de pago. El namespace usado es `seed-2026-oscarjoel1990` y el contador `visitas` (línea correspondiente en `script.js`). Ten en cuenta:
 
 - El contador sube también con tus propias visitas de prueba; no distingue visitantes únicos de recargas.
 - Es un servicio de terceros fuera de tu control: si algún día deja de responder, el sitio simplemente muestra un guion (`—`) en vez de un número, sin romper el resto de la página.
