@@ -143,6 +143,30 @@
           </div>
         </dl>
 
+        <!--
+          Cuenta regresiva — apunta al inicio del día 17 de octubre de 2026
+          (zona horaria de Ciudad de México, UTC-6). Cuando se confirme el
+          horario exacto, ajusta la constante COUNTDOWN_TARGET en script.js.
+        -->
+        <div class="countdown" id="countdown" aria-label="Cuenta regresiva para SEED 2026">
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-days">00</span>
+            <span class="countdown-label">Días</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-hours">00</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-minutes">00</span>
+            <span class="countdown-label">Min</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="cd-seconds">00</span>
+            <span class="countdown-label">Seg</span>
+          </div>
+        </div>
+
         <div class="hero-ctas">
           <a href="#registro" class="btn btn-primary">Registrarme</a>
           <a href="#encuentro" class="btn btn-ghost">Conocer el encuentro</a>
@@ -471,8 +495,25 @@
 
   <div class="container footer-bottom">
     <p>© 2026 SEED. Todos los derechos reservados.</p>
+    <!--
+      Conteo de visitantes — usa countapi.xyz, un servicio gratuito y sin
+      registro que incrementa un contador cada vez que alguien carga la
+      página. No requiere backend propio. Ver README.md, sección
+      "Conteo de visitantes", para cómo cambiarlo o quitarlo.
+    -->
+    <p class="visitor-counter">Visitas al sitio: <span id="visitor-count">—</span></p>
   </div>
 </footer>
+
+<!--
+  Botón flotante de WhatsApp — visible en toda la página, incluso al hacer
+  scroll. Sustituye el número si cambia el contacto institucional.
+-->
+<a href="https://wa.me/525611339050" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escribir a SEED por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path d="M16.02 4C9.4 4 4 9.37 4 15.98c0 2.1.55 4.15 1.6 5.96L4 28l6.24-1.63a12.1 12.1 0 0 0 5.78 1.47h.01c6.62 0 12.02-5.37 12.02-11.98C28.05 9.37 22.65 4 16.02 4Zm0 21.9h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.7.97.99-3.6-.24-.37a9.9 9.9 0 0 1-1.52-5.33c0-5.47 4.46-9.92 9.94-9.92 2.66 0 5.15 1.04 7.02 2.91a9.86 9.86 0 0 1 2.91 7.01c0 5.47-4.46 9.92-9.98 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+  </svg>
+</a>
 
 <div class="mobile-cta">
   <a href="#registro" class="btn btn-primary">Registrarme</a>

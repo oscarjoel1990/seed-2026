@@ -103,7 +103,26 @@ Como alternativa o complemento, el botón de correo (`mailto:`) y el botón de W
 - [ ] Reemplazar `[LinkedIn de SEED]` o eliminar ese enlace del footer si no aplica.
 - [ ] Revisar el sitio en móvil y escritorio antes de compartir la liga.
 - [ ] (Opcional) Sustituir `logo-seed.svg` por el archivo oficial del logo si está disponible en alta resolución.
+- [ ] Ajustar `COUNTDOWN_TARGET` en `script.js` cuando se confirme el horario exacto del encuentro.
 
-## 9. Nota importante
+## 9. Cuenta regresiva, conteo de visitantes y botón de WhatsApp
+
+**Cuenta regresiva (hero):** cuenta días, horas, minutos y segundos hasta el **17 de octubre de 2026, 00:00h (Ciudad de México)**. La fecha objetivo vive en `script.js`, en la constante `COUNTDOWN_TARGET`. Cuando confirmes el horario exacto del encuentro, actualiza esa línea, por ejemplo:
+
+```js
+var COUNTDOWN_TARGET = new Date("2026-10-17T09:00:00-06:00").getTime();
+```
+
+Cuando la fecha se cumple, la cuenta regresiva se detiene sola y muestra ceros.
+
+**Conteo de visitantes (footer):** usa [countapi.xyz](https://countapi.xyz), un servicio externo, gratuito y sin registro que incrementa un número cada vez que alguien carga la página. No requiere backend propio ni cuenta de pago. El namespace usado es `seed-2026-oscarjoel1990` y la clave `visitas` (línea correspondiente en `script.js`). Ten en cuenta:
+
+- El contador sube también con tus propias visitas de prueba; no distingue visitantes únicos de recargas.
+- Es un servicio de terceros fuera de tu control: si algún día deja de responder, el sitio simplemente muestra un guion (`—`) en vez de un número, sin romper el resto de la página.
+- Si prefieres no depender de un servicio externo, puedes quitar el bloque completo (HTML del footer + el bloque "Conteo de visitantes" en `script.js`) sin afectar nada más del sitio.
+
+**Botón flotante de WhatsApp:** aparece fijo en la esquina inferior derecha en todas las páginas y se mantiene visible al hacer scroll. Usa el mismo número que el botón de la sección Registro (`+52 56 1133 9050`). Para cambiarlo, edita el `href="https://wa.me/..."` en el bloque `<a class="whatsapp-float">` dentro de `index.html` (justo antes del `<div class="mobile-cta">`).
+
+## 10. Nota importante
 
 Este es un sitio **100% estático**: no tiene backend, base de datos ni almacenamiento de datos de los usuarios. Cualquier "envío" de formulario debe resolverse con un servicio externo (Google Forms, Tally, etc.) o mediante correo/WhatsApp, tal como está configurado.
