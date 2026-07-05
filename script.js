@@ -55,9 +55,9 @@
      Hay dos copias del mismo widget en la página (hero + sección Boletos);
      ambas se actualizan a la vez porque se seleccionan con querySelectorAll.
      Estados:
-       1) Antes del 20 de julio  → "El precio Early Bird comienza en:"
-       2) 20 jul – 31 ago        → "El precio Early Bird termina en:"
-       3) Después del 31 de ago  → mensaje de cierre, cuenta detenida.
+       1) Antes del 20 de julio  → "Early Bird abre en"
+       2) 20 jul – 31 ago        → "Early Bird termina en"
+       3) Después del 31 de ago  → "Early Bird finalizó", cuenta detenida.
      Si las fechas de la etapa Early Bird cambian, ajusta estas dos constantes. */
   var EARLY_BIRD_START = new Date("2026-07-20T00:00:00-06:00").getTime();
   var EARLY_BIRD_END = new Date("2026-08-31T23:59:59-06:00").getTime();
@@ -89,32 +89,43 @@
     });
   }
 
+  function setCountdownSubcaption(text) {
+    document.querySelectorAll("[data-countdown-subcaption]").forEach(function (el) {
+      el.textContent = text;
+    });
+  }
+
   function updateCountdown() {
     if (!countdownWidgets.length) return;
 
     var now = new Date().getTime();
     var diff;
     var caption;
+    var subcaption;
     var isPast = false;
 
     if (now < EARLY_BIRD_START) {
       diff = EARLY_BIRD_START - now;
-      caption = "El precio Early Bird ($4,200 MXN) comienza en:";
+      caption = "Early Bird abre en";
+      subcaption = "Prepárate para asegurar tu boleto con precio preferente.";
     } else if (now <= EARLY_BIRD_END) {
       diff = EARLY_BIRD_END - now;
-      caption = "El precio Early Bird ($4,200 MXN) termina en:";
+      caption = "Early Bird termina en";
+      subcaption = "El precio Early Bird de $4,200 MXN estará disponible solo durante esta etapa.";
     } else {
       diff = 0;
       isPast = true;
-      caption = "La etapa Early Bird ha finalizado";
+      caption = "Early Bird finalizó";
+      subcaption = "El precio Early Bird ya no está disponible. Consulta la etapa vigente de registro.";
     }
 
     if (isPast) {
       setCountdownValues(0, 0, 0, 0);
       setCountdownCaption(caption);
+      setCountdownSubcaption(subcaption);
       countdownWidgets.forEach(function (widget) {
         widget.classList.add("is-past");
-        widget.setAttribute("aria-label", "La etapa Early Bird ha finalizado");
+        widget.setAttribute("aria-label", "Early Bird finalizó");
       });
       clearInterval(countdownTimer);
       return;
@@ -127,6 +138,7 @@
 
     setCountdownValues(days, hours, minutes, seconds);
     setCountdownCaption(caption);
+    setCountdownSubcaption(subcaption);
   }
 
   var countdownTimer;

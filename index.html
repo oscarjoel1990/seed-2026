@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEED 2026 — Soil, Earth. Regenerative Design | Encuentro Internacional</title>
-<meta name="description" content="SEED 2026 reúne especialistas en suelo fértil, biomateriales y proyectos regenerativos. Boleto Early Bird desde $4,200 MXN (del 20 de julio al 31 de agosto). Encuentro internacional en la Ciudad de México, 17 y 18 de octubre.">
+<title>SEED 2026 | Encuentro Internacional de Diseño Regenerativo</title>
+<meta name="description" content="SEED 2026 reunirá conversaciones, proyectos y especialistas alrededor del suelo fértil, biomateriales y diseño regenerativo. Etapa Early Bird del 20 de julio al 31 de agosto.">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="SEED 2026 — Soil, Earth. Regenerative Design">
-<meta property="og:description" content="Boleto Early Bird desde $4,200 MXN. Encuentro internacional que reúne especialistas en suelo fértil, biomateriales y proyectos regenerativos. 17 y 18 de octubre, Ciudad de México.">
+<meta property="og:title" content="SEED 2026 — Early Bird próximamente">
+<meta property="og:description" content="Una experiencia internacional de diseño regenerativo con valor estimado superior a $7,000 MXN. Precio Early Bird previsto: $4,200 MXN por persona.">
 <meta property="og:image" content="assets/images/og-seed-2026.jpg">
 <meta property="og:url" content="https://oscarjoel1990.github.io/seed-2026/">
 <meta property="og:site_name" content="SEED">
@@ -17,8 +17,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SEED 2026 — Soil, Earth. Regenerative Design">
-<meta name="twitter:description" content="Boleto Early Bird desde $4,200 MXN. Encuentro internacional de suelo fértil, biomateriales y diseño regenerativo. 17 y 18 de octubre, Ciudad de México.">
+<meta name="twitter:title" content="SEED 2026 — Early Bird próximamente">
+<meta name="twitter:description" content="Una experiencia internacional de diseño regenerativo con valor estimado superior a $7,000 MXN. Precio Early Bird previsto: $4,200 MXN por persona.">
 <meta name="twitter:image" content="assets/images/og-seed-2026.jpg">
 
 <!-- Favicon -->
@@ -33,8 +33,12 @@
 
 <!--
   Schema.org — Event
-  Los campos con [placeholder] o "No consta" deben confirmarse antes de publicar.
-  No se inventaron cifras, costos ni URLs de registro: se dejan explícitos para tu revisión.
+  Etapa comercial previa: esta landing todavía NO tiene activada la venta
+  (falta la liga real de Mercado Pago). Por eso "offers" no incluye "url":
+  agrégalo únicamente cuando exista un enlace de pago real, para no anunciar
+  una compra que aún no se puede completar.
+  Los campos con [placeholder] o "No consta" deben confirmarse antes de
+  publicar la venta pública. No se inventaron cifras, costos ni URLs.
 -->
 <script type="application/ld+json">
 {
@@ -64,8 +68,7 @@
   },
   "offers": {
     "@type": "Offer",
-    "url": "[Liga de pago Mercado Pago]",
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/PreOrder",
     "price": "4200",
     "priceCurrency": "MXN",
     "priceValidUntil": "2026-08-31",
@@ -96,7 +99,7 @@
     </nav>
 
     <div class="header-actions">
-      <a href="#boletos" class="btn btn-primary btn-small">Comprar boleto</a>
+      <a href="#boletos" class="btn btn-primary btn-small">Boletos Early Bird</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -127,8 +130,13 @@
     <div class="container hero-grid">
       <div class="hero-copy" data-animate>
         <p class="eyebrow">Encuentro SEED 2026 · Encuentro internacional</p>
-        <h1 class="hero-title">Soil, Earth.<br>Regenerative Design.</h1>
-        <p class="hero-subtitle">Un encuentro para reunir especialistas en suelo fértil, biomateriales y proyectos regenerativos, alrededor de una agenda común de tecnología e innovación.</p>
+        <h1 class="hero-title">Conecta con quienes están diseñando el futuro regenerativo.</h1>
+        <p class="hero-subtitle">SEED 2026 reúne durante dos días a especialistas, proyectos y organizaciones alrededor del suelo fértil, los biomateriales y el diseño regenerativo. Una experiencia creada para generar conversaciones, alianzas y oportunidades reales.</p>
+
+        <div class="hero-price-block" data-animate>
+          <p class="price-anchor-line">Valor estimado de una experiencia de esta escala: <strong>más de $7,000 MXN</strong> por persona.</p>
+          <p class="price-early-line">Precio Early Bird con apoyo de patrocinadores: <strong>$4,200 MXN</strong> por persona.</p>
+        </div>
 
         <dl class="hero-facts">
           <div>
@@ -141,24 +149,24 @@
           </div>
           <div>
             <dt>Horario</dt>
-            <dd>[Horario] — por confirmar</dd>
+            <dd><span class="placeholder-tag">[Horario por confirmar]</span></dd>
           </div>
           <div>
-            <dt>Precio Early Bird</dt>
-            <dd>$4,200 MXN</dd>
+            <dt>Etapa Early Bird</dt>
+            <dd>20 jul – 31 ago, 2026</dd>
           </div>
         </dl>
 
         <!--
           Cuenta regresiva de la etapa Early Bird (20 de julio – 31 de agosto
-          de 2026, zona horaria Ciudad de México UTC-6). El texto y los
-          valores se actualizan solos según la fecha: antes del 20 de julio
-          muestra "comienza en", entre el 20 de julio y el 31 de agosto
-          muestra "termina en". Ajusta las constantes en script.js
-          (EARLY_BIRD_START / EARLY_BIRD_END) si las fechas cambian.
+          de 2026, zona horaria Ciudad de México UTC-6). Texto y valores se
+          actualizan solos según la fecha, en tres estados: antes de abrir,
+          durante la etapa, y después de finalizada. Ajusta las constantes en
+          script.js (EARLY_BIRD_START / EARLY_BIRD_END) si las fechas cambian.
         -->
         <div class="countdown" data-countdown-widget aria-label="Cuenta regresiva de la etapa Early Bird">
           <p class="countdown-caption" data-countdown-caption>Cargando cuenta regresiva…</p>
+          <p class="countdown-subcaption" data-countdown-subcaption></p>
           <div class="countdown-grid">
             <div class="countdown-item">
               <span class="countdown-value" data-cd="days">00</span>
@@ -180,8 +188,8 @@
         </div>
 
         <div class="hero-ctas">
-          <a href="#boletos" class="btn btn-primary btn-buy">Comprar mi boleto — $4,200 MXN</a>
-          <a href="#encuentro" class="btn btn-ghost">Conocer el encuentro</a>
+          <a href="#boletos" class="btn btn-primary btn-buy">Ver boleto Early Bird — $4,200 MXN</a>
+          <a href="#faq" class="btn btn-ghost">Resolver dudas sobre el encuentro</a>
         </div>
       </div>
 
@@ -198,8 +206,8 @@
   <section class="section pricing-section" id="boletos">
     <div class="container pricing-inner">
       <p class="section-kicker pricing-kicker" data-animate>Etapa Early Bird · 20 de julio – 31 de agosto</p>
-      <h2 class="pricing-title" data-animate>Un encuentro de esta escala normalmente cuesta más de $7,000 MXN por persona.</h2>
-      <p class="pricing-lead" data-animate>Gracias a las marcas y organizaciones que se han sumado como patrocinadores de SEED 2026, tu lugar cuesta hoy $4,200 MXN — mientras dure la etapa Early Bird.</p>
+      <h2 class="pricing-title" data-animate>Un encuentro de esta escala, con una agenda especializada, espacios de conexión y una comunidad estratégica, normalmente tendría un valor superior a $7,000 MXN por persona.</h2>
+      <p class="pricing-lead" data-animate>Gracias al respaldo de patrocinadores y aliados que se están sumando a SEED 2026, la etapa Early Bird permite acceder por $4,200 MXN por persona: un acceso patrocinado a una experiencia de alto valor, no solo un descuento.</p>
 
       <div class="price-card" data-animate>
         <div class="price-row">
@@ -209,13 +217,13 @@
         <p class="price-note">
           Precio Early Bird válido del 20 de julio al 31 de agosto de 2026.
           Después de esa fecha, el boleto cambia a
-          <strong>[Precio regular después del Early Bird]</strong> — sustituye
-          este dato en cuanto lo confirmes.
+          <span class="placeholder-tag">[Precio regular posterior pendiente]</span>.
         </p>
 
         <!-- Segunda instancia del mismo widget de cuenta regresiva, sincronizada por script.js -->
         <div class="countdown countdown-center" data-countdown-widget aria-label="Cuenta regresiva de la etapa Early Bird">
           <p class="countdown-caption" data-countdown-caption>Cargando cuenta regresiva…</p>
+          <p class="countdown-subcaption" data-countdown-subcaption></p>
           <div class="countdown-grid">
             <div class="countdown-item">
               <span class="countdown-value" data-cd="days">00</span>
@@ -237,13 +245,22 @@
         </div>
 
         <!--
-          Botón de compra — liga de pago de Mercado Pago (Checkout Pro /
-          "Link de pago"). No requiere backend: genera la liga desde tu panel
-          de Mercado Pago y pégala aquí. Ver README.md → "Cómo conectar el
-          botón de compra (Mercado Pago)".
+          Fase comercial previa: todavía NO existe una liga de pago de
+          Mercado Pago activa, así que este botón se muestra deshabilitado
+          a propósito (sin href, sin destino falso). Cuando generes la liga
+          real desde tu panel de Mercado Pago (Cobrar → Link de pago), sigue
+          estos pasos:
+            1) Quita el atributo "disabled" de este <button>.
+            2) Cámbialo por un <a href="TU_LIGA_AQUI" ...> con el mismo texto.
+            3) Quita la clase "is-pending".
+          Ver README.md → "Cómo conectar el botón de compra (Mercado Pago)".
         -->
-        <a href="[Liga de pago Mercado Pago]" class="btn btn-primary btn-large btn-buy" target="_blank" rel="noopener">Comprar mi boleto — $4,200 MXN</a>
-        <p class="price-trust">Pago seguro con Mercado Pago · Cupo limitado por el aforo de la sede.</p>
+        <button type="button" class="btn btn-primary btn-large btn-buy is-pending" disabled aria-disabled="true">Link de compra próximamente</button>
+        <p class="price-trust">
+          <span class="placeholder-tag">[Liga Mercado Pago pendiente]</span>
+          — el pago se procesará de forma segura con Mercado Pago en cuanto se active.
+        </p>
+        <p class="sponsors-note">Marcas y organizaciones aliadas: <span class="placeholder-tag">[Patrocinadores por confirmar]</span></p>
       </div>
     </div>
   </section>
@@ -290,40 +307,93 @@
     </div>
   </section>
 
-  <!-- ============ POR QUÉ ASISTIR ============ -->
-  <section class="section section-alt" id="por-que-asistir">
+  <!-- ============ POR QUÉ VALE MÁS DE $7,000 ============ -->
+  <section class="section section-alt" id="valor">
     <div class="container">
       <div class="section-heading center" data-animate>
-        <p class="section-kicker">Por qué asistir</p>
-        <h2>Un punto de encuentro para quienes construyen soluciones con propósito.</h2>
+        <p class="section-kicker">Valor de la experiencia</p>
+        <h2>Una experiencia con valor superior a un boleto convencional.</h2>
+        <p class="section-note">El valor de SEED 2026 no está únicamente en asistir a conferencias. Está en formar parte de una conversación especializada, conectar con personas que ya están construyendo soluciones y acceder a una agenda diseñada para abrir posibilidades de colaboración.</p>
+      </div>
+
+      <div class="value-grid">
+        <article class="value-card" data-animate>
+          <span class="value-index">01</span>
+          <h3>Dos días de inmersión</h3>
+          <p>Una agenda diseñada para profundizar en suelo fértil, biomateriales y proyectos regenerativos desde una perspectiva práctica e interdisciplinaria.</p>
+        </article>
+        <article class="value-card" data-animate>
+          <span class="value-index">02</span>
+          <h3>Red de alto valor</h3>
+          <p>Conecta con personas, organizaciones y proyectos vinculados al diseño regenerativo, sostenibilidad e innovación aplicada.</p>
+        </article>
+        <article class="value-card" data-animate>
+          <span class="value-index">03</span>
+          <h3>Conversaciones que abren puertas</h3>
+          <p>Más que ponencias, SEED busca detonar colaboraciones, alianzas y proyectos concretos.</p>
+        </article>
+        <article class="value-card" data-animate>
+          <span class="value-index">04</span>
+          <h3>Acceso patrocinado</h3>
+          <p>El apoyo de patrocinadores permite abrir una etapa Early Bird de $4,200 MXN, por debajo del valor estimado de una experiencia de esta escala.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFICIOS DE ASISTIR ============ -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section-heading center" data-animate>
+        <p class="section-kicker">Beneficios de asistir</p>
+        <h2>Lo que puedes llevarte de SEED 2026.</h2>
       </div>
 
       <div class="benefits-grid">
         <article class="benefit-card" data-animate>
           <span class="benefit-number">01</span>
-          <h3>Conectar con especialistas</h3>
-          <p>Acceso directo a quienes trabajan en suelo fértil, biomateriales y proyectos regenerativos.</p>
+          <h3>Networking estratégico</h3>
+          <p>Conecta con personas que comparten una visión activa sobre regeneración, diseño, sostenibilidad, biomateriales y proyectos de impacto.</p>
         </article>
         <article class="benefit-card" data-animate>
           <span class="benefit-number">02</span>
-          <h3>Conversaciones estratégicas</h3>
-          <p>Conversatorios y mesas de diálogo diseñadas para profundizar, no solo para exponer.</p>
+          <h3>Ideas aplicables</h3>
+          <p>Accede a conversaciones que pueden ayudarte a repensar proyectos, modelos de colaboración y oportunidades concretas.</p>
         </article>
         <article class="benefit-card" data-animate>
           <span class="benefit-number">03</span>
-          <h3>Oportunidades de colaboración</h3>
-          <p>Un espacio pensado para identificar alianzas entre organizaciones, proyectos y personas afines.</p>
+          <h3>Alianzas potenciales</h3>
+          <p>SEED está diseñado para que las conversaciones no terminen en el evento, sino que puedan convertirse en proyectos, colaboraciones o iniciativas futuras.</p>
         </article>
         <article class="benefit-card" data-animate>
           <span class="benefit-number">04</span>
-          <h3>Visión institucional</h3>
-          <p>Perspectiva y referentes para fortalecer la estrategia de tu organización o proyecto.</p>
+          <h3>Visibilidad y comunidad</h3>
+          <p>Forma parte de una red que está creciendo alrededor de soluciones regenerativas y nuevas formas de crear valor.</p>
         </article>
         <article class="benefit-card" data-animate>
           <span class="benefit-number">05</span>
-          <h3>Comunidad de impacto</h3>
-          <p>Formar parte de una red internacional de acción alrededor del diseño regenerativo.</p>
+          <h3>Experiencia curada</h3>
+          <p>No es un evento masivo sin dirección. Es un encuentro pensado para reunir perfiles, temas y conversaciones con intención.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PÚBLICO OBJETIVO ============ -->
+  <section class="section section-alt" id="publico">
+    <div class="container section-grid">
+      <div class="section-heading" data-animate>
+        <p class="section-kicker">Público objetivo</p>
+        <h2>Un encuentro diseñado para quienes toman decisiones y construyen proyectos.</h2>
+      </div>
+      <div class="section-body" data-animate>
+        <ul class="audience-list">
+          <li>Líderes de organizaciones vinculadas a sostenibilidad y diseño regenerativo.</li>
+          <li>Emprendedores en biomateriales, construcción natural o agricultura regenerativa.</li>
+          <li>Aliados estratégicos e instituciones afines al propósito de SEED.</li>
+          <li>Tomadores de decisión interesados en innovación aplicada a retos ecológicos.</li>
+          <li>Comunidad interesada en suelo fértil, biomateriales y proyectos regenerativos.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -333,41 +403,39 @@
     <div class="container">
       <div class="section-heading center" data-animate>
         <p class="section-kicker">Networking con resultados</p>
-        <h2>Conexiones que se convirtieron en proyectos.</h2>
-        <p class="section-note">
-          En la edición 2024 de SEED surgieron alianzas y colaboraciones entre
-          asistentes. Este apartado está listo para mostrarlas — sustituye
-          cada tarjeta con el caso real, las organizaciones involucradas y el
-          resultado concreto antes de publicar. No se inventaron casos: son
-          marcadores de posición a propósito.
-        </p>
+        <h2>Networking con resultados: aprendizajes de SEED 2024.</h2>
+        <p class="section-note">En la edición 2024, el encuentro abrió conversaciones que derivaron en alianzas, colaboraciones y proyectos con continuidad. Esta sección será actualizada con casos documentados conforme se autorice su publicación. <span class="placeholder-tag">[Casos 2024 por documentar]</span></p>
       </div>
 
       <div class="cases-grid">
         <article class="case-card" data-animate>
-          <span class="case-tag">Alianza SEED 2024</span>
-          <h3>[Nombre de la alianza o proyecto]</h3>
-          <p>[Organizaciones o personas involucradas]</p>
-          <p class="case-result">[Resultado concreto: qué se logró gracias al encuentro]</p>
+          <span class="case-tag">Caso 01</span>
+          <h3>Alianza entre proyectos</h3>
+          <p><span class="placeholder-tag">[Nombre de alianza o proyecto concretado]</span></p>
+          <p><span class="placeholder-tag">[Personas u organizaciones involucradas]</span></p>
+          <p class="case-result"><span class="placeholder-tag">[Resultado concreto después del encuentro]</span></p>
         </article>
         <article class="case-card" data-animate>
-          <span class="case-tag">Alianza SEED 2024</span>
-          <h3>[Nombre de la alianza o proyecto]</h3>
-          <p>[Organizaciones o personas involucradas]</p>
-          <p class="case-result">[Resultado concreto: qué se logró gracias al encuentro]</p>
+          <span class="case-tag">Caso 02</span>
+          <h3>Colaboración interdisciplinaria</h3>
+          <p><span class="placeholder-tag">[Nombre de colaboración]</span></p>
+          <p><span class="placeholder-tag">[Área o industria relacionada]</span></p>
+          <p class="case-result"><span class="placeholder-tag">[Impacto o siguiente paso generado]</span></p>
         </article>
         <article class="case-card" data-animate>
-          <span class="case-tag">Alianza SEED 2024</span>
-          <h3>[Nombre de la alianza o proyecto]</h3>
-          <p>[Organizaciones o personas involucradas]</p>
-          <p class="case-result">[Resultado concreto: qué se logró gracias al encuentro]</p>
+          <span class="case-tag">Caso 03</span>
+          <h3>Oportunidad surgida en networking</h3>
+          <p><span class="placeholder-tag">[Conversación iniciada en SEED 2024]</span></p>
+          <p><span class="placeholder-tag">[Seguimiento posterior]</span></p>
+          <p class="case-result"><span class="placeholder-tag">[Resultado verificable]</span></p>
         </article>
       </div>
+      <p class="case-disclaimer" data-animate>Los casos serán publicados conforme se confirme autorización de las personas y organizaciones involucradas.</p>
     </div>
   </section>
 
   <!-- ============ AGENDA ============ -->
-  <section class="section" id="agenda">
+  <section class="section section-alt" id="agenda">
     <div class="container">
       <div class="section-heading center" data-animate>
         <p class="section-kicker">Agenda</p>
@@ -403,53 +471,46 @@
   </section>
 
   <!-- ============ PARTICIPANTES ============ -->
-  <section class="section section-alt" id="participantes">
+  <section class="section" id="participantes">
     <div class="container">
       <div class="section-heading center" data-animate>
         <p class="section-kicker">Participantes</p>
         <h2>Especialistas invitados a la edición 2026.</h2>
-        <p class="section-note">La lista de participantes para esta edición está en construcción. Sustituye cada tarjeta conforme se confirmen los nombres.</p>
+        <p class="section-note"><span class="placeholder-tag">[Participantes por anunciar]</span> — la lista para esta edición está en construcción. Sustituye cada tarjeta conforme se confirmen los nombres.</p>
       </div>
 
       <div class="people-grid">
         <article class="person-card" data-animate>
           <div class="person-avatar">[NP]</div>
-          <h3>[Nombre del participante]</h3>
-          <p>[Cargo / organización]</p>
+          <h3><span class="placeholder-tag">[Nombre del participante]</span></h3>
+          <p><span class="placeholder-tag">[Cargo / organización]</span></p>
         </article>
         <article class="person-card" data-animate>
           <div class="person-avatar">[NP]</div>
-          <h3>[Nombre del participante]</h3>
-          <p>[Cargo / organización]</p>
+          <h3><span class="placeholder-tag">[Nombre del participante]</span></h3>
+          <p><span class="placeholder-tag">[Cargo / organización]</span></p>
         </article>
         <article class="person-card" data-animate>
           <div class="person-avatar">[NP]</div>
-          <h3>[Nombre del participante]</h3>
-          <p>[Cargo / organización]</p>
+          <h3><span class="placeholder-tag">[Nombre del participante]</span></h3>
+          <p><span class="placeholder-tag">[Cargo / organización]</span></p>
         </article>
         <article class="person-card" data-animate>
           <div class="person-avatar">[NP]</div>
-          <h3>[Nombre del participante]</h3>
-          <p>[Cargo / organización]</p>
+          <h3><span class="placeholder-tag">[Nombre del participante]</span></h3>
+          <p><span class="placeholder-tag">[Cargo / organización]</span></p>
         </article>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ PÚBLICO OBJETIVO ============ -->
-  <section class="section" id="publico">
-    <div class="container section-grid">
-      <div class="section-heading" data-animate>
-        <p class="section-kicker">Público objetivo</p>
-        <h2>Un encuentro diseñado para quienes toman decisiones y construyen proyectos.</h2>
-      </div>
-      <div class="section-body" data-animate>
-        <ul class="audience-list">
-          <li>Líderes de organizaciones vinculadas a sostenibilidad y diseño regenerativo.</li>
-          <li>Emprendedores en biomateriales, construcción natural o agricultura regenerativa.</li>
-          <li>Aliados estratégicos e instituciones afines al propósito de SEED.</li>
-          <li>Tomadores de decisión interesados en innovación aplicada a retos ecológicos.</li>
-          <li>Comunidad interesada en suelo fértil, biomateriales y proyectos regenerativos.</li>
+      <div class="axes-row" data-animate>
+        <p class="axes-label">Ejes temáticos confirmados para esta edición:</p>
+        <ul class="axes-chips">
+          <li>Suelo fértil</li>
+          <li>Biomateriales</li>
+          <li>Diseño regenerativo</li>
+          <li>Tecnología aplicada</li>
+          <li>Proyectos de impacto</li>
+          <li>Innovación y sostenibilidad</li>
         </ul>
       </div>
     </div>
@@ -462,7 +523,7 @@
         <p class="section-kicker">Sede</p>
         <h2>Zyanya, Ciudad de México</h2>
         <p class="venue-address">Rey Maxtla 188, San Francisco Tetecala, Azcapotzalco, CDMX.</p>
-        <p class="venue-modality">Modalidad: [Presencial / híbrida / virtual] — por confirmar.</p>
+        <p class="venue-modality">Modalidad: <span class="placeholder-tag">[Sede / detalles logísticos por completar]</span></p>
         <a class="btn btn-ghost"
            href="https://www.google.com/maps/search/?api=1&query=Rey+Maxtla+188%2C+San+Francisco+Tetecala%2C+Azcapotzalco%2C+CDMX"
            target="_blank" rel="noopener">Ver en Google Maps</a>
@@ -481,52 +542,85 @@
     </div>
   </section>
 
-  <!-- ============ COMPRA FINAL ============ -->
-  <section class="section register-section" id="registro">
-    <div class="container register-inner" data-animate>
-      <p class="section-kicker">Último llamado</p>
-      <h2>Asegura tu lugar en SEED 2026.</h2>
-      <p class="register-copy">$4,200 MXN por persona mientras dure la etapa Early Bird (20 de julio – 31 de agosto). Después de esa fecha, el precio cambia a <strong>[Precio regular después del Early Bird]</strong>.</p>
-
-      <div class="register-ctas">
-        <!--
-          Botón principal de compra — liga de pago de Mercado Pago. Sustituye
-          el href por la liga real antes de publicar. Ver README.md → "Cómo
-          conectar el botón de compra (Mercado Pago)".
-        -->
-        <a href="[Liga de pago Mercado Pago]" class="btn btn-primary btn-large btn-buy" target="_blank" rel="noopener">Comprar mi boleto — $4,200 MXN</a>
-        <a href="mailto:seed.contactomx@gmail.com?subject=Informaci%C3%B3n%20SEED%202026" class="btn btn-ghost btn-large">Escribir por correo</a>
-        <a href="https://wa.me/525611339050" class="btn btn-ghost btn-large" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-      </div>
-      <p class="register-note">Pago seguro con Mercado Pago. Correo y WhatsApp corresponden al contacto institucional registrado por SEED; confirma que sigan vigentes para esta edición antes de publicar.</p>
-    </div>
-  </section>
-
   <!-- ============ FAQ ============ -->
   <section class="section" id="faq">
     <div class="container faq-grid">
       <div class="section-heading" data-animate>
         <p class="section-kicker">Preguntas frecuentes</p>
-        <h2>Lo que necesitas saber antes de comprar tu boleto.</h2>
+        <h2>Lo que necesitas saber sobre la etapa Early Bird.</h2>
       </div>
 
       <div class="faq-list" data-animate>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿El evento tiene costo?</span>
+            <span>¿Cuándo inicia la etapa Early Bird?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>Sí. Durante la etapa Early Bird (20 de julio – 31 de agosto de 2026) el boleto cuesta $4,200 MXN por persona, un precio especial gracias a los patrocinadores de esta edición frente a un valor real estimado de más de $7,000 MXN. Después del 31 de agosto, el precio cambia a <strong>[Precio regular después del Early Bird]</strong> — sustituye este dato en cuanto lo confirmes.</p>
+            <p>La etapa Early Bird inicia el 20 de julio de 2026.</p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿A quién está dirigido?</span>
+            <span>¿Cuándo termina la etapa Early Bird?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-answer">
-            <p>A líderes de organizaciones, emprendedores, aliados estratégicos, instituciones y comunidad interesada en suelo fértil, biomateriales y proyectos regenerativos.</p>
+            <p>La etapa Early Bird termina el 31 de agosto de 2026.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cuál es el costo del boleto Early Bird?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>El costo Early Bird es de $4,200 MXN por persona, frente a un valor estimado de más de $7,000 MXN para una experiencia de esta escala.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cuál será el precio después del Early Bird?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p><span class="placeholder-tag">[Precio regular posterior pendiente]</span> — se confirmará antes del cierre de la etapa Early Bird.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo podré comprar mi boleto?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>La compra se habilitará mediante Mercado Pago para facilitar el proceso. El enlace definitivo será integrado antes del inicio de la etapa Early Bird.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Puedo solicitar factura?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p><span class="placeholder-tag">[Información fiscal pendiente de confirmar]</span></p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué incluye el boleto?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p><span class="placeholder-tag">[Beneficios incluidos pendientes de confirmar]</span></p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿El cupo será limitado?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>El cupo estará sujeto al aforo de la sede y a la capacidad operativa del encuentro.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -540,24 +634,6 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span>¿Cómo confirmo mi asistencia?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-answer">
-            <p>Comprando tu boleto con Mercado Pago en la sección <a href="#boletos">Boletos</a>. Tu lugar queda confirmado en cuanto se acredita el pago — sin formularios adicionales.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span>¿Puedo invitar a alguien más?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-answer">
-            <p>No consta una política definida para esta edición. Escríbenos para confirmarlo antes de invitar a alguien más.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
             <span>¿A quién contacto si tengo dudas?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
@@ -566,6 +642,30 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL PROVISIONAL ============ -->
+  <section class="section register-section" id="registro">
+    <div class="container register-inner" data-animate>
+      <p class="section-kicker">SEED 2026 · Early Bird próximamente</p>
+      <h2>Asegura tu intención de asistir a SEED 2026.</h2>
+      <p class="register-copy">Durante la etapa Early Bird, el boleto tendrá un costo de $4,200 MXN por persona gracias al apoyo de patrocinadores — frente a un valor estimado superior a $7,000 MXN. El enlace de compra se habilitará antes del inicio de la etapa (20 de julio de 2026).</p>
+
+      <div class="register-ctas">
+        <!--
+          TODO: Reemplazar este <button disabled> por el <a href="LIGA_REAL">
+          de Mercado Pago en cuanto exista, y quitar la clase "is-pending".
+          Ver README.md → "Cómo conectar el botón de compra (Mercado Pago)".
+        -->
+        <button type="button" class="btn btn-primary btn-large btn-buy is-pending" disabled aria-disabled="true">Comprar boleto Early Bird — próximamente</button>
+        <a href="mailto:seed.contactomx@gmail.com?subject=Informaci%C3%B3n%20SEED%202026" class="btn btn-ghost btn-large">Solicitar información</a>
+        <a href="https://wa.me/525611339050" class="btn btn-ghost btn-large" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+      <p class="register-note">
+        <span class="placeholder-tag">[Liga Mercado Pago pendiente]</span>
+        — enlace de compra en proceso de configuración. Correo y WhatsApp corresponden al contacto institucional registrado por SEED; confirma que sigan vigentes para esta edición antes de publicar.
+      </p>
     </div>
   </section>
 
@@ -591,7 +691,7 @@
       <h3>Redes</h3>
       <ul>
         <li><a href="https://www.instagram.com/seedcollective.mx/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="[LinkedIn de SEED]" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><span class="placeholder-tag">[LinkedIn de SEED]</span></li>
       </ul>
     </div>
   </div>
@@ -599,9 +699,9 @@
   <div class="container footer-bottom">
     <p>© 2026 SEED. Todos los derechos reservados.</p>
     <!--
-      Conteo de visitantes — usa countapi.xyz, un servicio gratuito y sin
-      registro que incrementa un contador cada vez que alguien carga la
-      página. No requiere backend propio. Ver README.md, sección
+      Conteo de visitantes — usa CounterAPI (api.counterapi.dev), un servicio
+      externo gratuito y sin registro que incrementa un contador cada vez que
+      alguien carga la página. No hay backend propio. Ver README.md, sección
       "Conteo de visitantes", para cómo cambiarlo o quitarlo.
     -->
     <p class="visitor-counter">Visitas al sitio: <span id="visitor-count">—</span></p>
@@ -619,7 +719,7 @@
 </a>
 
 <div class="mobile-cta">
-  <a href="#boletos" class="btn btn-primary">Comprar boleto — $4,200 MXN</a>
+  <a href="#boletos" class="btn btn-primary">Ver boleto Early Bird — $4,200 MXN</a>
 </div>
 
 <script src="script.js"></script>

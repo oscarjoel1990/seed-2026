@@ -1,6 +1,8 @@
 # SEED 2026 — Landing page del encuentro
 
-Sitio publicado: https://oscarjoel1990.github.io/seed-2026/ — enfocado en venta de boletos: precio Early Bird con ancla de valor, cuenta regresiva, sección de networking/casos de éxito, conteo de visitas, botón de compra vía Mercado Pago y botón flotante de WhatsApp.
+Sitio publicado: https://oscarjoel1990.github.io/seed-2026/
+
+**Fase actual: maqueta comercial avanzada (preventa), no venta pública activa.** El sitio ya está orientado 100% a vender boletos —ancla de precio ($7,000 vs $4,200 MXN), cuenta regresiva de la etapa Early Bird, sección de valor, beneficios, networking/casos de éxito, FAQ comercial y CTA final— pero el botón de compra está **intencionalmente deshabilitado** porque todavía no existe la liga real de Mercado Pago. Los datos que faltan (horario, precio regular posterior, casos 2024, participantes, etc.) se muestran como etiquetas `[placeholder]` a propósito: funcionan como checklist visual de lo que falta antes de activar la venta pública.
 
 Landing page estática (HTML + CSS + JS vanilla) para el encuentro **SEED 2026: Soil, Earth. Regenerative Design**. No requiere backend, base de datos ni servicios de pago. Lista para publicarse gratis en GitHub Pages.
 
@@ -34,29 +36,33 @@ Este sitio se construyó a partir de dos fuentes reales que encontré en tu carp
 
 **Precio y etapa Early Bird — datos que me diste directamente (no vienen de archivos, los uso tal cual me los compartiste):**
 - Precio Early Bird: **$4,200 MXN por persona**, vigente del **20 de julio al 31 de agosto de 2026**.
-- Valor de referencia usado como ancla de precio: "más de $7,000 MXN por persona".
-- Precio regular después del 31 de agosto: **no me lo diste, así que quedó como placeholder** `[Precio regular después del Early Bird]`. Complétalo en cuanto lo definas (aparece en 3 lugares: sección Boletos, FAQ y CTA final).
+- Valor de referencia usado como ancla de precio: "más de $7,000 MXN por persona" (se presenta como acceso patrocinado, no como simple descuento).
+- Precio regular después del 31 de agosto: **no me lo diste, así que quedó como la etiqueta** `[Precio regular posterior pendiente]`. Complétalo en cuanto lo definas (aparece en 3 lugares: sección Boletos, FAQ y CTA final).
 
-**Pendiente — búscalo en el buscador de tu navegador o reemplázalo manualmente (marcado con `[corchetes]` o "No consta" en el código):**
-- Horario exacto de cada día.
-- Modalidad (presencial / híbrida / virtual).
-- Precio regular después del Early Bird.
-- Liga de pago de Mercado Pago (ver sección 7).
-- Casos de éxito de networking 2024: nombres de la alianza/proyecto, organizaciones involucradas y resultado concreto (sección `#networking`). **No inventé ningún caso** — dejé 3 tarjetas con placeholders para que las completes con historias reales; publicar casos falsos sería publicidad engañosa.
-- Nombres y cargos de ponentes/participantes 2026.
+**Pendiente — todas estas etiquetas son intencionales (checklist visual de esta fase de preventa). Búscalas en el buscador de tu navegador o reemplázalas directamente en el código:**
+- `[Horario por confirmar]` — horario exacto de cada día (hero).
+- `[Sede / detalles logísticos por completar]` — modalidad presencial/híbrida/virtual (sección Sede).
+- `[Precio regular posterior pendiente]` — precio después del Early Bird (Boletos, FAQ, CTA final).
+- `[Liga Mercado Pago pendiente]` — liga de pago (ver sección 7). El botón de compra está deshabilitado (`<button disabled>`) hasta que exista esta liga.
+- `[Patrocinadores por confirmar]` — nombres de marcas/organizaciones aliadas (sección Boletos).
+- `[Casos 2024 por documentar]` y las 3 tarjetas de `#networking` — nombres de alianza/proyecto, organizaciones involucradas y resultado concreto. **No inventé ningún caso** — publicar casos falsos sería publicidad engañosa.
+- `[Participantes por anunciar]` y las tarjetas de `#participantes` — nombres y cargos de ponentes 2026.
 - Agenda definitiva (horarios y actividades de la sección `#agenda`).
-- URL final del sitio publicado (meta `og:url`).
-- Liga de LinkedIn de SEED, si aplica.
+- `[LinkedIn de SEED]` en el footer, si aplica.
+
+**No se inventó ningún dato para esta iteración:** ni ligas de pago, ni patrocinadores, ni casos 2024, ni participantes. Todo lo que no consta en tus archivos o en lo que me indicaste queda marcado como pendiente.
 
 ## 3. Cómo editar el contenido
 
-Todo el copy vive en `index.html`. Busca el texto entre `[corchetes]` y sustitúyelo directamente. Ejemplos:
+Todo el copy vive en `index.html`. Los datos pendientes se ven como una etiqueta con borde punteado (clase `.placeholder-tag`) — por diseño, para que no parezcan un error sino un pendiente editorial. Busca el texto entre `[corchetes]` y sustitúyelo directamente (puedes dejar o quitar el `<span class="placeholder-tag">` que lo envuelve, según prefieras). Ejemplos:
 
-- `[Horario] — por confirmar` → escribe el horario real, por ejemplo `9:00 a 15:00 h`.
-- `[Liga de pago Mercado Pago]` (aparece 3 veces: hero, sección Boletos y CTA final; más una cuarta vez en `schema.org` del `<head>`) → pega la URL de tu link de pago. Ver sección 7.
-- `[Precio regular después del Early Bird]` (aparece en la sección Boletos, FAQ y CTA final) → escribe el precio que aplicará a partir del 1 de septiembre de 2026.
-- Tarjetas de `#networking` → sustituye `[Nombre de la alianza o proyecto]`, `[Organizaciones o personas involucradas]` y `[Resultado concreto...]` con casos reales de la edición 2024.
-- Tarjetas de `#participantes` → sustituye `[Nombre del participante]`, `[Cargo / organización]` y las iniciales `[NP]` por cada ponente confirmado.
+- `[Horario por confirmar]` (hero) → escribe el horario real, por ejemplo `9:00 a 15:00 h`.
+- `[Liga Mercado Pago pendiente]` → una vez que tengas la liga real, ver sección 7 para activar el botón de compra (hoy es un `<button disabled>`, no un enlace).
+- `[Precio regular posterior pendiente]` (Boletos, FAQ y CTA final) → escribe el precio que aplicará a partir del 1 de septiembre de 2026.
+- `[Patrocinadores por confirmar]` (sección Boletos) → nombra las marcas u organizaciones aliadas conforme se confirmen.
+- Tarjetas de `#networking` → sustituye los placeholders de cada uno de los 3 casos (alianza, colaboración, oportunidad de networking) con historias reales de la edición 2024.
+- Tarjetas de `#participantes` → sustituye `[Nombre del participante]`, `[Cargo / organización]` y las iniciales `[NP]` por cada ponente confirmado. Los "ejes temáticos" (chips debajo de las tarjetas) ya son datos reales y no necesitan cambiarse salvo que la temática cambie.
+- `[Sede / detalles logísticos por completar]` (sección Sede) → especifica la modalidad (presencial/híbrida/virtual) en cuanto se confirme.
 
 ## 4. Cómo cambiar el logo
 
@@ -84,40 +90,41 @@ Cambia estos valores hexadecimales y el resto del sitio se actualiza automática
 3. Ve a **Settings → Pages** del repositorio.
 4. En "Source", selecciona la rama `main` y la carpeta `/ (root)`.
 5. Guarda. GitHub te dará una URL pública, normalmente `https://oscarjoel1990.github.io/seed-2026/`.
-6. Actualiza esa URL en `index.html` donde dice `[URL del sitio publicado]` (meta `og:url`) y vuelve a subir el archivo.
 
 No se necesita build, `npm install` ni configuración adicional: el sitio funciona tal cual con HTML, CSS y JS estándar.
 
-## 7. Cómo conectar el botón de compra (Mercado Pago)
+## 7. Cómo conectar el botón de compra (Mercado Pago) — cuando decidas activar la venta
 
-GitHub Pages no tiene backend, así que la compra del boleto se resuelve con una **liga de pago de Mercado Pago** — no necesitas programar nada ni instalar un plugin:
+Esta iteración deja el botón de compra **deshabilitado a propósito** (`<button type="button" disabled>`), no como un enlace, precisamente para no publicar un link que dé error 404 mientras no exista la liga real. Hay dos botones así: uno en la sección **Boletos** (`#boletos`) y otro en el **CTA final** (`#registro`); ambos tienen un comentario `<!-- TODO -->` justo arriba en el código. El botón del hero ("Ver boleto Early Bird") sí es un enlace real, pero solo navega a la sección `#boletos` — no intenta cobrar nada.
+
+Cuando quieras activar la venta pública:
 
 1. Entra a tu cuenta de Mercado Pago (una cuenta gratuita es suficiente) en [mercadopago.com.mx](https://www.mercadopago.com.mx).
 2. En el menú, busca **Cobrar → Link de pago**.
 3. Da clic en **"Ingresar monto"**, escribe `$4,200 MXN` y el título que verá quien compre, por ejemplo "Boleto SEED 2026 — Early Bird".
-4. Opcionalmente agrega una imagen, elige los medios de pago que aceptas y configura el **vencimiento del link** (por ejemplo, el 31 de agosto de 2026, para que deje de estar activo cuando termine el Early Bird) y la página a la que se redirige a la persona después de pagar.
+4. Opcionalmente agrega una imagen, elige los medios de pago que aceptas y configura el **vencimiento del link** (por ejemplo, el 31 de agosto de 2026) y la página de redirección tras el pago.
 5. Da clic en **"Crear Link de pago"** y copia la URL generada (se ve como `https://mpago.la/xxxxxxx`).
-6. En `index.html`, busca `[Liga de pago Mercado Pago]` (aparece 3 veces: botón del hero, sección **Boletos** y el CTA final) y sustitúyelo por esa URL en las 3 ubicaciones.
-7. Actualiza también el mismo placeholder dentro del bloque `schema.org` (`<script type="application/ld+json">`) en el `<head>`.
+6. En `index.html`, en cada uno de los dos `<button disabled class="... is-pending">Link de compra próximamente / Comprar boleto Early Bird — próximamente</button>`:
+   - Cámbialo por `<a href="TU_LIGA_AQUI" class="btn btn-primary btn-large btn-buy" target="_blank" rel="noopener">` con el mismo texto de venta (por ejemplo "Comprar mi boleto — $4,200 MXN").
+   - Quita el atributo `disabled` y la clase `is-pending`.
+7. Sustituye también las etiquetas `[Liga Mercado Pago pendiente]` cercanas a cada botón, y agrega `"url": "TU_LIGA_AQUI"` dentro del bloque `"offers"` de `schema.org` (`<script type="application/ld+json">` en el `<head>` — hoy ese campo no existe a propósito, para no anunciar una compra que aún no se puede completar).
 
 Crear un Link de pago no tiene costo; Mercado Pago solo cobra su comisión habitual cuando se concreta una venta.
 
-Con esto, comprar un boleto toma **un solo clic**: la persona sale del sitio directo al checkout seguro de Mercado Pago (Visa, Mastercard, transferencia SPEI, etc.), sin formularios intermedios de tu parte.
-
-Como alternativa o complemento, el botón de correo (`mailto:`) y el botón de WhatsApp (`wa.me`, incluido también como botón flotante) ya están conectados a los datos de contacto encontrados en tus archivos — confirma que sigan vigentes, por si alguien prefiere pagar por transferencia directa o tiene dudas antes de comprar.
+Como alternativa o complemento, el botón de correo (`mailto:`) y el botón de WhatsApp (`wa.me`, incluido también como botón flotante) ya están conectados a los datos de contacto encontrados en tus archivos — confirma que sigan vigentes.
 
 **Nota:** no generé ni tengo acceso a tu cuenta de Mercado Pago — eso debes hacerlo tú directamente en su plataforma, ya que implica datos de tu negocio y cuenta bancaria.
 
-## 8. Checklist antes de publicar
+## 8. Checklist antes de activar la venta pública
 
-- [ ] Sustituir `[Liga de pago Mercado Pago]` en las **4 ubicaciones** donde aparece (hero, sección Boletos, CTA final, `schema.org`).
-- [ ] Definir y sustituir `[Precio regular después del Early Bird]` en las 3 ubicaciones donde aparece.
-- [ ] Completar la sección `#networking` con 2–3 casos reales de alianzas o proyectos de la edición 2024 (nombre, organizaciones, resultado).
-- [ ] Confirmar horario y modalidad (o marcar "entrada libre" si ese fuera el caso).
+- [ ] Generar la liga real de Mercado Pago y seguir los pasos de la sección 7 para activar los 2 botones de compra (hoy deshabilitados) y el `schema.org`.
+- [ ] Definir y sustituir `[Precio regular posterior pendiente]` en las 3 ubicaciones donde aparece (Boletos, FAQ, CTA final).
+- [ ] Completar la sección `#networking` con 2–3 casos reales de alianzas o proyectos de la edición 2024, autorizados por las personas/organizaciones involucradas.
+- [ ] Confirmar `[Horario por confirmar]` y `[Sede / detalles logísticos por completar]` (modalidad).
+- [ ] Confirmar `[Patrocinadores por confirmar]` con los nombres reales que autoricen aparecer.
 - [ ] Confirmar que el correo, WhatsApp e Instagram de contacto sigan vigentes para 2026.
-- [ ] Sustituir las tarjetas de participantes con nombres reales, si ya están confirmados.
-- [ ] Completar la agenda definitiva de ambos días.
-- [ ] Reemplazar `[URL del sitio publicado]` con la URL real de GitHub Pages.
+- [ ] Sustituir las tarjetas de `[Nombre del participante]` / `[Cargo / organización]` con nombres reales confirmados.
+- [ ] Completar la agenda definitiva de ambos días (hoy son horarios propuestos entre corchetes).
 - [ ] Reemplazar `[LinkedIn de SEED]` o eliminar ese enlace del footer si no aplica.
 - [ ] Revisar el sitio en móvil y escritorio antes de compartir la liga.
 - [ ] (Opcional) Sustituir `logo-seed.svg` por el archivo oficial del logo si está disponible en alta resolución.
@@ -125,11 +132,11 @@ Como alternativa o complemento, el botón de correo (`mailto:`) y el botón de W
 
 ## 9. Cuenta regresiva, precio Early Bird, conteo de visitantes y botón de WhatsApp
 
-**Cuenta regresiva de la etapa Early Bird (hero + sección Boletos):** el mismo widget aparece dos veces en la página y ambas copias se actualizan juntas. Cambia de mensaje solo según la fecha:
+**Cuenta regresiva de la etapa Early Bird (hero + sección Boletos):** el mismo widget aparece dos veces en la página y ambas copias se actualizan juntas. Cada estado muestra un texto principal y un mensaje complementario (`data-countdown-subcaption`):
 
-- Antes del 20 de julio de 2026 → "El precio Early Bird comienza en:"
-- Del 20 de julio al 31 de agosto de 2026 → "El precio Early Bird termina en:"
-- Después del 31 de agosto de 2026 → "La etapa Early Bird ha finalizado" (la cuenta se detiene en ceros).
+- Antes del 20 de julio de 2026 → "Early Bird abre en" / "Prepárate para asegurar tu boleto con precio preferente."
+- Del 20 de julio al 31 de agosto de 2026 → "Early Bird termina en" / "El precio Early Bird de $4,200 MXN estará disponible solo durante esta etapa."
+- Después del 31 de agosto de 2026 → "Early Bird finalizó" / "El precio Early Bird ya no está disponible. Consulta la etapa vigente de registro." (la cuenta se detiene en ceros).
 
 Las fechas viven en `script.js`:
 
